@@ -1,0 +1,293 @@
+
+/*
+    Online Resume Website
+    Author: Paris Allen-Saffold
+    Date: October 17, 2026
+    File: style.css
+*/
+
+/* General Page Settings */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6f9;
+    color: #263238;
+    line-height: 1.7;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header */
+
+.site-header {
+    background: linear-gradient(
+        135deg,
+        #102a43,
+        #176b78
+    );
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.site-header h1 {
+    font-size: 2.8rem;
+    margin: 0 0 10px;
+    letter-spacing: 1px;
+}
+
+.job-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.location {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.contact-info a:hover {
+    color: #d3f4f1;
+}
+
+/* Navigation */
+
+.main-nav {
+    background-color: #102a43;
+    padding: 15px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.main-nav a:hover {
+    color: #a9e5df;
+    text-decoration: underline;
+}
+
+/* Main Resume Content */
+
+main.container {
+    background-color: white;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Sections */
+
+section {
+    margin-bottom: 45px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #176b78;
+    font-size: 1.6rem;
+    border-bottom: 3px solid #176b78;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #102a43;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+/* Work Experience */
+
+.job {
+    background-color: #f7fafc;
+    padding: 22px;
+    margin-bottom: 22px;
+    border-left: 5px solid #176b78;
+    border-radius: 6px;
+}
+
+.company {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.date {
+    color: #526574;
+    font-style: italic;
+    margin: 5px 0 12px;
+}
+
+/* Lists */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Skills Grid */
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.skills-list li {
+    background-color: #e9f3f5;
+    color: #102a43;
+    padding: 12px;
+    margin: 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Keyboard Accessibility */
+
+a:focus-visible {
+    outline: 3px solid #e5ad35;
+    outline-offset: 4px;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #102a43;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.site-footer p {
+    margin: 5px;
+}
+
+/* Tablet Screens */
+
+@media screen and (max-width: 768px) {
+
+    .site-header h1 {
+        font-size: 2.1rem;
+    }
+
+    main.container {
+        padding: 25px;
+    }
+
+    .skills-list {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .main-nav ul {
+        gap: 15px;
+    }
+}
+
+/* Mobile Screens */
+
+@media screen and (max-width: 480px) {
+
+    .site-header {
+        padding: 35px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .job-title {
+        font-size: 0.95rem;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main.container {
+        width: 95%;
+        padding: 18px;
+    }
+
+    .job {
+        padding: 15px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
